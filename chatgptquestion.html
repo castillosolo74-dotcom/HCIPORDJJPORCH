@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <p id="s3"></p>
+    <p id="s4"></p>
+    <p id="s5"></p>
+    <p id="s6"></p>
+    <p id="s7"></p>
+    <p id="s8"></p>
+    <p id="s9"></p>
+    <p id="s10"></p>
+    <p id="s11"></p>
+    <p id="s12"></p>
+    <p id="s13"></p>
+    <p id="s14"></p>
+    <p id="s15"></p>
+    <p id="s16"></p>
+    <p id="s17"></p>
+    <p id="s18"></p>
+    <p id="s19"></p>
+    <p id="s20"></p>
+    <script>
+        let s1 = "   javascript i fun  ";
+        document.getElementById("s1").innerHTML = s1.trim().toUpperCase();
+
+        let course = "BSIT-1A";
+        document.getElementById("s2").innerHTML = course.slice(0, 4);
+        document.getElementById("s3").innerHTML = course.slice(5, 7);
+
+        let text = "i like cats. cats are cute.";
+        document.getElementById("s4").innerHTML = text.replaceAll("cats", "dogs");
+
+        let makes = "practice makes perfect";
+        document.getElementById("s5").innerHTML = makes.split(" ").length;
+
+        let name = "dave";
+        document.getElementById("s6").innerHTML = name.toUpperCase().split("").join("-");
+
+    </script>
+</body>
+
+</html>

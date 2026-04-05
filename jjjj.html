@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <span class="logo">
+                <a href="#">porsche</a>
+            </span>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+            <ul id="menu">
+                <li class="BAR"><a href="">Home</a></li>
+                <li class="BAR"><a href="">About</a></li>
+                <li class="BAR"><a href="">Contact</a></li>
+                <li class="BAR"><a href="">Products</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        /* Navbar layout */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Hamburger button */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Menu */
+        #menu {
+            display: flex;
+            list-style: none;
+        }
+
+        /* 📱 MOBILE */
+        @media (max-width: 768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #menu {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: black;
+                flex-direction: column;
+                text-align: center;
+
+                /* hidden by default */
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+
+            #menu.active {
+                max-height: 300px;
+                /* show menu */
+            }
+
+            #menu li {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
